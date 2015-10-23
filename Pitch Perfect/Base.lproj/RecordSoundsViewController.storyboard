@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNm-A4-1Lt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="microphone"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRB-mi-LA5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="stop"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpx-8v-Mlq">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="aRB-mi-LA5" secondAttribute="bottom" constant="10" id="Ixf-Tx-WpU"/>
+                            <constraint firstItem="Fpx-8v-Mlq" firstAttribute="top" secondItem="UNm-A4-1Lt" secondAttribute="bottom" constant="8" id="LNN-wI-6Bv"/>
+                            <constraint firstItem="aRB-mi-LA5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QK8-Tl-aB3"/>
+                            <constraint firstItem="Fpx-8v-Mlq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XdS-oW-Z6C"/>
+                            <constraint firstItem="UNm-A4-1Lt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lBK-vv-c5h"/>
+                            <constraint firstItem="UNm-A4-1Lt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pWj-Mo-ZL8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UNm-A4-1Lt"/>
+                                <exclude reference="aRB-mi-LA5"/>
+                                <exclude reference="Fpx-8v-Mlq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Ixf-Tx-WpU"/>
+                                <exclude reference="lBK-vv-c5h"/>
+                                <exclude reference="pWj-Mo-ZL8"/>
+                                <exclude reference="QK8-Tl-aB3"/>
+                                <exclude reference="LNN-wI-6Bv"/>
+                                <exclude reference="XdS-oW-Z6C"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="UNm-A4-1Lt"/>
+                                <include reference="aRB-mi-LA5"/>
+                                <include reference="Fpx-8v-Mlq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Ixf-Tx-WpU"/>
+                                <include reference="lBK-vv-c5h"/>
+                                <include reference="pWj-Mo-ZL8"/>
+                                <include reference="QK8-Tl-aB3"/>
+                                <include reference="LNN-wI-6Bv"/>
+                                <include reference="XdS-oW-Z6C"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="microphone" width="100" height="100"/>
+        <image name="stop" width="50" height="50"/>
+    </resources>
+</document>
