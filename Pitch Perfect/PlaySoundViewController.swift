@@ -18,16 +18,19 @@ class PlaySoundViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
+        
     }
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     func playSoundAtRate(rate: Float){
