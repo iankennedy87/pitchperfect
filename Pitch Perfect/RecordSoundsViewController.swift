@@ -63,12 +63,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         //TODO: Step 1 - Save the recorded audio
         if(flag){
-            recordedAudio = RecordedAudio()
-            recordedAudio.filePathUrl = recorder.url
-            recordedAudio.title = recorder.url.lastPathComponent
+            recordedAudio = RecordedAudio(inputFilePathUrl: recorder.url, inputTitle: recorder.url.lastPathComponent!)
             print("about to perform segue")
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
-        }else{
+        }else {
             print("Recording was not successful")
             recordButton.enabled = true
             stopButton.hidden = true
