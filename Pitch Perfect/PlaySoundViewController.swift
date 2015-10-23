@@ -19,13 +19,6 @@ class PlaySoundViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
-//            let filePathUrl = NSURL.fileURLWithPath(filePath)
-//
-//        } else {
-//            print("the filePath is empty")
-//        }
-        // Do any additional setup after loading the view.
         audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
@@ -87,14 +80,5 @@ class PlaySoundViewController: UIViewController {
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
