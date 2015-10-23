@@ -58,6 +58,13 @@ class PlaySoundViewController: UIViewController {
         playAudioWithVariablePitch(-1000)
     }
     
+    @IBAction func playEchoAudio(sender: UIButton) {
+        playAudioWithEcho(0.3)
+    }
+    
+    @IBAction func playReverbAudio(sender: UIButton) {
+        playAudioWithReverb(60)
+    }
     
     func playAudioWithVariablePitch(pitch: Float) {
         audioPlayer.stop()
@@ -73,6 +80,48 @@ class PlaySoundViewController: UIViewController {
         
         audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
         audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        try! audioEngine.start()
+        
+        audioPlayerNode.play()
+    }
+    
+    func playAudioWithEcho(timeDelay: Float) {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        let audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        let echoNode = AVAudioUnitDelay()
+        echoNode.delayTime = NSTimeInterval(timeDelay)
+        audioEngine.attachNode(echoNode)
+        
+        audioEngine.connect(audioPlayerNode, to: echoNode, format: nil)
+        audioEngine.connect(echoNode, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        try! audioEngine.start()
+        
+        audioPlayerNode.play()
+    }
+    
+    func playAudioWithReverb(wetDryMix: Float) {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        let reverbNode = AVAudioUnitReverb()
+        reverbNode.wetDryMix = wetDryMix
+        audioEngine.attachNode(reverbNode)
+        
+        let audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        audioEngine.connect(audioPlayerNode, to: reverbNode, format: nil)
+        audioEngine.connect(reverbNode, to: audioEngine.outputNode, format: nil)
         
         audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
         try! audioEngine.start()

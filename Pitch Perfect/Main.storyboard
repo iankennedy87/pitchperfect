@@ -58,10 +58,33 @@
                                     <action selector="playDarthAudio:" destination="Azi-ee-PwD" eventType="touchUpInside" id="HB6-nV-nDP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxG-JD-R1C" userLabel="echoButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Echo Button"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="53" y="408" width="84" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playEchoAudio:" destination="Azi-ee-PwD" eventType="touchUpInside" id="7EE-iN-xUH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFv-ud-K4R" userLabel="reverbButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Reverb Button"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="256" y="408" width="98" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playReverbAudio:" destination="Azi-ee-PwD" eventType="touchUpInside" id="6oN-ak-xkK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jxG-JD-R1C" firstAttribute="top" secondItem="tdP-cR-Yco" secondAttribute="bottom" constant="50" id="6wI-GL-BEF"/>
                             <constraint firstItem="stW-mF-bS8" firstAttribute="top" secondItem="yOQ-0r-bVR" secondAttribute="bottom" constant="50" id="9oA-zS-7xy"/>
                             <constraint firstItem="tdP-cR-Yco" firstAttribute="top" secondItem="stW-mF-bS8" secondAttribute="bottom" constant="50" id="C0C-ii-MYs"/>
                             <constraint firstItem="Cxs-mv-bMT" firstAttribute="centerX" secondItem="1Pa-33-WB9" secondAttribute="centerX" id="DAL-mX-VJd"/>
@@ -69,8 +92,11 @@
                             <constraint firstItem="stW-mF-bS8" firstAttribute="leading" secondItem="1Pa-33-WB9" secondAttribute="leadingMargin" constant="25" id="SfA-7b-wwj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZP1-ea-vx5" secondAttribute="trailing" constant="25" id="V8k-w0-Gj5"/>
                             <constraint firstItem="ZP1-ea-vx5" firstAttribute="top" secondItem="yOQ-0r-bVR" secondAttribute="bottom" constant="50" id="XZQ-1X-MwS"/>
+                            <constraint firstItem="jxG-JD-R1C" firstAttribute="leading" secondItem="1Pa-33-WB9" secondAttribute="leadingMargin" constant="25" id="YaB-6j-f57"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fFv-ud-K4R" secondAttribute="trailing" constant="25" id="b9M-Fq-eSh"/>
                             <constraint firstItem="tdP-cR-Yco" firstAttribute="leading" secondItem="1Pa-33-WB9" secondAttribute="leadingMargin" constant="25" id="cwk-kl-ryj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DlE-4X-eOv" secondAttribute="trailing" constant="25" id="etk-nS-7le"/>
+                            <constraint firstItem="fFv-ud-K4R" firstAttribute="top" secondItem="DlE-4X-eOv" secondAttribute="bottom" constant="50" id="ffh-Zl-367"/>
                             <constraint firstItem="jvD-xm-Fb4" firstAttribute="top" secondItem="Cxs-mv-bMT" secondAttribute="bottom" constant="20" id="szm-ZL-7FW"/>
                         </constraints>
                         <variation key="default">
@@ -80,18 +106,24 @@
                                 <exclude reference="ZP1-ea-vx5"/>
                                 <exclude reference="tdP-cR-Yco"/>
                                 <exclude reference="DlE-4X-eOv"/>
+                                <exclude reference="jxG-JD-R1C"/>
+                                <exclude reference="fFv-ud-K4R"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="szm-ZL-7FW"/>
-                                <exclude reference="DAL-mX-VJd"/>
-                                <exclude reference="NpG-7U-p13"/>
-                                <exclude reference="etk-nS-7le"/>
-                                <exclude reference="V8k-w0-Gj5"/>
-                                <exclude reference="XZQ-1X-MwS"/>
                                 <exclude reference="9oA-zS-7xy"/>
                                 <exclude reference="SfA-7b-wwj"/>
                                 <exclude reference="C0C-ii-MYs"/>
                                 <exclude reference="cwk-kl-ryj"/>
+                                <exclude reference="V8k-w0-Gj5"/>
+                                <exclude reference="XZQ-1X-MwS"/>
+                                <exclude reference="NpG-7U-p13"/>
+                                <exclude reference="etk-nS-7le"/>
+                                <exclude reference="6wI-GL-BEF"/>
+                                <exclude reference="YaB-6j-f57"/>
+                                <exclude reference="b9M-Fq-eSh"/>
+                                <exclude reference="ffh-Zl-367"/>
+                                <exclude reference="DAL-mX-VJd"/>
+                                <exclude reference="szm-ZL-7FW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -101,18 +133,24 @@
                                 <include reference="ZP1-ea-vx5"/>
                                 <include reference="tdP-cR-Yco"/>
                                 <include reference="DlE-4X-eOv"/>
+                                <include reference="jxG-JD-R1C"/>
+                                <include reference="fFv-ud-K4R"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="szm-ZL-7FW"/>
-                                <include reference="DAL-mX-VJd"/>
-                                <include reference="NpG-7U-p13"/>
-                                <include reference="etk-nS-7le"/>
-                                <include reference="V8k-w0-Gj5"/>
-                                <include reference="XZQ-1X-MwS"/>
                                 <include reference="9oA-zS-7xy"/>
                                 <include reference="SfA-7b-wwj"/>
                                 <include reference="C0C-ii-MYs"/>
                                 <include reference="cwk-kl-ryj"/>
+                                <include reference="V8k-w0-Gj5"/>
+                                <include reference="XZQ-1X-MwS"/>
+                                <include reference="NpG-7U-p13"/>
+                                <include reference="etk-nS-7le"/>
+                                <include reference="6wI-GL-BEF"/>
+                                <include reference="YaB-6j-f57"/>
+                                <include reference="b9M-Fq-eSh"/>
+                                <include reference="ffh-Zl-367"/>
+                                <include reference="DAL-mX-VJd"/>
+                                <include reference="szm-ZL-7FW"/>
                             </mask>
                         </variation>
                     </view>
