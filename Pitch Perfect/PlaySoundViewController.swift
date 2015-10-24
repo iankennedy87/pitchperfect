@@ -52,8 +52,7 @@ class PlaySoundViewController: UIViewController {
     }
     
     @IBAction func stopAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioPlayerNode.stop()
+        resetAudio()
     }
     
     func resetAudio() {
