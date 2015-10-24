@@ -83,12 +83,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         pauseButton.hidden = true
         resumeButton.hidden = false
         recording.hidden = true
-        print(recordButton.enabled)
+
     }
     
     @IBAction func resumeRecorder(sender: UIButton) {
-        print("pressed resume button")
         resumeButton.hidden = true
+        pauseButton.hidden = false
         recording.hidden = false
         audioRecorder.record()
     }

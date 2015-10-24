@@ -13,7 +13,7 @@ class PlaySoundViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer!
     var receivedAudio:RecordedAudio!
-    var audioPlayerNode: AVAudioPlayerNode!
+    var audioPlayerNode: AVAudioPlayerNode! = AVAudioPlayerNode()
     var audioEngine: AVAudioEngine!
     var audioFile:AVAudioFile!
     
