@@ -12,28 +12,19 @@ import AVFoundation
 class PlaySoundViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer!
-    var receivedAudio:RecordedAudio!
+    var receivedAudio: RecordedAudio!
     var audioPlayerNode: AVAudioPlayerNode! = AVAudioPlayerNode()
     var audioEngine: AVAudioEngine!
-    var audioFile:AVAudioFile!
+    var audioFile: AVAudioFile!
     
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
-        
-    }
-    
 
     
     @IBAction func playFastSound(sender: UIButton) {
@@ -59,11 +50,18 @@ class PlaySoundViewController: UIViewController {
     @IBAction func playReverbAudio(sender: UIButton) {
         playAudioWithReverb(60)
     }
+    
+    @IBAction func stopAudio(sender: UIButton) {
+        audioPlayer.stop()
+        audioPlayerNode.stop()
+    }
+    
     func resetAudio() {
         audioEngine.stop()
         audioEngine.reset()
         audioPlayer.stop()
     }
+    
     func playSoundAtRate(rate: Float){
         resetAudio()
         
@@ -128,10 +126,4 @@ class PlaySoundViewController: UIViewController {
         
         audioPlayerNode.play()
     }
-    
-    @IBAction func stopAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioPlayerNode.stop()
-    }
-
 }

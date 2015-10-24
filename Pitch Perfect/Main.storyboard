@@ -31,7 +31,7 @@
                                 <animations/>
                                 <state key="normal" image="stop"/>
                                 <connections>
-                                    <action selector="stopAudio:" destination="Azi-ee-PwD" eventType="touchUpInside" id="xJF-MW-UzV"/>
+                                    <action selector="stopAudio:" destination="Azi-ee-PwD" eventType="touchUpInside" id="Ym5-Ti-JUF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-ea-vx5" userLabel="rabbitButton">
@@ -173,14 +173,6 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K4J-ad-dvv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDI-qe-N9g" userLabel="stopButton">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" image="stop"/>
-                                <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Skw-D0-xkl"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI6-ty-sgR" userLabel="tapLabel">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
@@ -217,6 +209,14 @@
                                     <action selector="resumeRecorder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAC-D1-pJ4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDI-qe-N9g" userLabel="stopButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Skw-D0-xkl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.41120907983587085" green="0.63430634261445229" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -237,11 +237,11 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ZFd-MO-38L"/>
-                                <exclude reference="vDI-qe-N9g"/>
                                 <exclude reference="JI6-ty-sgR"/>
                                 <exclude reference="v1g-0u-jOW"/>
                                 <exclude reference="CbJ-6g-dBQ"/>
                                 <exclude reference="uPs-nt-bon"/>
+                                <exclude reference="vDI-qe-N9g"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Rfc-IE-NjW"/>
@@ -261,11 +261,11 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="ZFd-MO-38L"/>
-                                <include reference="vDI-qe-N9g"/>
                                 <include reference="JI6-ty-sgR"/>
                                 <include reference="v1g-0u-jOW"/>
                                 <include reference="CbJ-6g-dBQ"/>
                                 <include reference="uPs-nt-bon"/>
+                                <include reference="vDI-qe-N9g"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Rfc-IE-NjW"/>
@@ -289,7 +289,7 @@
                         <outlet property="recordButton" destination="ZFd-MO-38L" id="pTs-1F-moP"/>
                         <outlet property="recording" destination="v1g-0u-jOW" id="UHo-4g-1gX"/>
                         <outlet property="resumeButton" destination="uPs-nt-bon" id="DEc-3h-LUw"/>
-                        <outlet property="stopButton" destination="vDI-qe-N9g" id="zdC-8A-mTr"/>
+                        <outlet property="stopButton" destination="vDI-qe-N9g" id="sey-mg-dqv"/>
                         <outlet property="tapToRecord" destination="JI6-ty-sgR" id="Vco-6H-l6g"/>
                         <segue destination="Azi-ee-PwD" kind="show" identifier="stopRecording" id="A7N-cN-Ss1"/>
                     </connections>
