@@ -62,9 +62,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Echo Button"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="53" y="408" width="84" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="playEchoAudio:" destination="Azi-ee-PwD" eventType="touchUpInside" id="7EE-iN-xUH"/>
                                 </connections>
@@ -73,9 +70,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Reverb Button"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="256" y="408" width="98" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="playReverbAudio:" destination="Azi-ee-PwD" eventType="touchUpInside" id="6oN-ak-xkK"/>
                                 </connections>
@@ -110,20 +104,20 @@
                                 <exclude reference="fFv-ud-K4R"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="szm-ZL-7FW"/>
+                                <exclude reference="DAL-mX-VJd"/>
+                                <exclude reference="NpG-7U-p13"/>
+                                <exclude reference="etk-nS-7le"/>
+                                <exclude reference="V8k-w0-Gj5"/>
+                                <exclude reference="XZQ-1X-MwS"/>
+                                <exclude reference="b9M-Fq-eSh"/>
+                                <exclude reference="ffh-Zl-367"/>
+                                <exclude reference="6wI-GL-BEF"/>
+                                <exclude reference="YaB-6j-f57"/>
                                 <exclude reference="9oA-zS-7xy"/>
                                 <exclude reference="SfA-7b-wwj"/>
                                 <exclude reference="C0C-ii-MYs"/>
                                 <exclude reference="cwk-kl-ryj"/>
-                                <exclude reference="V8k-w0-Gj5"/>
-                                <exclude reference="XZQ-1X-MwS"/>
-                                <exclude reference="NpG-7U-p13"/>
-                                <exclude reference="etk-nS-7le"/>
-                                <exclude reference="6wI-GL-BEF"/>
-                                <exclude reference="YaB-6j-f57"/>
-                                <exclude reference="b9M-Fq-eSh"/>
-                                <exclude reference="ffh-Zl-367"/>
-                                <exclude reference="DAL-mX-VJd"/>
-                                <exclude reference="szm-ZL-7FW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -137,20 +131,20 @@
                                 <include reference="fFv-ud-K4R"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="szm-ZL-7FW"/>
+                                <include reference="DAL-mX-VJd"/>
+                                <include reference="NpG-7U-p13"/>
+                                <include reference="etk-nS-7le"/>
+                                <include reference="V8k-w0-Gj5"/>
+                                <include reference="XZQ-1X-MwS"/>
+                                <include reference="b9M-Fq-eSh"/>
+                                <include reference="ffh-Zl-367"/>
+                                <include reference="6wI-GL-BEF"/>
+                                <include reference="YaB-6j-f57"/>
                                 <include reference="9oA-zS-7xy"/>
                                 <include reference="SfA-7b-wwj"/>
                                 <include reference="C0C-ii-MYs"/>
                                 <include reference="cwk-kl-ryj"/>
-                                <include reference="V8k-w0-Gj5"/>
-                                <include reference="XZQ-1X-MwS"/>
-                                <include reference="NpG-7U-p13"/>
-                                <include reference="etk-nS-7le"/>
-                                <include reference="6wI-GL-BEF"/>
-                                <include reference="YaB-6j-f57"/>
-                                <include reference="b9M-Fq-eSh"/>
-                                <include reference="ffh-Zl-367"/>
-                                <include reference="DAL-mX-VJd"/>
-                                <include reference="szm-ZL-7FW"/>
                             </mask>
                         </variation>
                     </view>
@@ -193,17 +187,42 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="0.062745098039215685" green="0.18823529411764706" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="156" y="500" width="89" height="18"/>
-                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1g-0u-jOW" userLabel="recordingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1g-0u-jOW" userLabel="recordingLabel">
                                 <rect key="frame" x="20" y="20" width="64" height="18"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="0.061549136513157895" green="0.18688322368421054" blue="0.30538137335526316" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="168" y="458" width="64" height="18"/>
+                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbJ-6g-dBQ" userLabel="pauseButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Tap to pause recording">
+                                    <color key="titleColor" red="0.062745098040000002" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseRecorder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obC-HX-iEA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPs-nt-bon" userLabel="resumeButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Tap to resume recording">
+                                    <color key="titleColor" red="0.062745098040000002" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="116" y="651" width="168" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resumeRecorder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAC-D1-pJ4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.41120907983587085" green="0.63430634261445229" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -211,11 +230,15 @@
                             <constraint firstItem="vDI-qe-N9g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CEz-QY-Ey1"/>
                             <constraint firstItem="v1g-0u-jOW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IId-Zt-hXi"/>
                             <constraint firstItem="JI6-ty-sgR" firstAttribute="top" secondItem="ZFd-MO-38L" secondAttribute="bottom" constant="8" id="JMF-DR-VgC"/>
+                            <constraint firstItem="uPs-nt-bon" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ki2-Rm-O56"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vDI-qe-N9g" secondAttribute="bottom" constant="20" id="Rfc-IE-NjW"/>
+                            <constraint firstItem="vDI-qe-N9g" firstAttribute="top" secondItem="CbJ-6g-dBQ" secondAttribute="bottom" constant="100" id="ZZE-Et-WyX"/>
+                            <constraint firstItem="vDI-qe-N9g" firstAttribute="top" secondItem="uPs-nt-bon" secondAttribute="bottom" constant="100" id="b2j-Tm-9UA"/>
                             <constraint firstItem="JI6-ty-sgR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cSw-zZ-FkW"/>
                             <constraint firstItem="v1g-0u-jOW" firstAttribute="top" secondItem="ZFd-MO-38L" secondAttribute="bottom" constant="8" id="cu2-le-bQo"/>
                             <constraint firstItem="ZFd-MO-38L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d1c-5f-fPO"/>
                             <constraint firstItem="ZFd-MO-38L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sK8-wZ-76D"/>
+                            <constraint firstItem="CbJ-6g-dBQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uv7-J9-3Nr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -223,15 +246,21 @@
                                 <exclude reference="vDI-qe-N9g"/>
                                 <exclude reference="JI6-ty-sgR"/>
                                 <exclude reference="v1g-0u-jOW"/>
+                                <exclude reference="CbJ-6g-dBQ"/>
+                                <exclude reference="uPs-nt-bon"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="d1c-5f-fPO"/>
                                 <exclude reference="sK8-wZ-76D"/>
-                                <exclude reference="IId-Zt-hXi"/>
-                                <exclude reference="cu2-le-bQo"/>
                                 <exclude reference="JMF-DR-VgC"/>
                                 <exclude reference="cSw-zZ-FkW"/>
+                                <exclude reference="IId-Zt-hXi"/>
+                                <exclude reference="cu2-le-bQo"/>
+                                <exclude reference="uv7-J9-3Nr"/>
+                                <exclude reference="Ki2-Rm-O56"/>
                                 <exclude reference="CEz-QY-Ey1"/>
+                                <exclude reference="ZZE-Et-WyX"/>
+                                <exclude reference="b2j-Tm-9UA"/>
                                 <exclude reference="Rfc-IE-NjW"/>
                             </mask>
                         </variation>
@@ -241,23 +270,31 @@
                                 <include reference="vDI-qe-N9g"/>
                                 <include reference="JI6-ty-sgR"/>
                                 <include reference="v1g-0u-jOW"/>
+                                <include reference="CbJ-6g-dBQ"/>
+                                <include reference="uPs-nt-bon"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="d1c-5f-fPO"/>
                                 <include reference="sK8-wZ-76D"/>
-                                <include reference="IId-Zt-hXi"/>
-                                <include reference="cu2-le-bQo"/>
                                 <include reference="JMF-DR-VgC"/>
                                 <include reference="cSw-zZ-FkW"/>
+                                <include reference="IId-Zt-hXi"/>
+                                <include reference="cu2-le-bQo"/>
+                                <include reference="uv7-J9-3Nr"/>
+                                <include reference="Ki2-Rm-O56"/>
                                 <include reference="CEz-QY-Ey1"/>
+                                <include reference="ZZE-Et-WyX"/>
+                                <include reference="b2j-Tm-9UA"/>
                                 <include reference="Rfc-IE-NjW"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="bRd-f9-Ehg"/>
                     <connections>
-                        <outlet property="recordButton" destination="ZFd-MO-38L" id="xwv-Pd-KU2"/>
+                        <outlet property="pauseButton" destination="CbJ-6g-dBQ" id="8CH-JH-zGl"/>
+                        <outlet property="recordButton" destination="ZFd-MO-38L" id="pTs-1F-moP"/>
                         <outlet property="recording" destination="v1g-0u-jOW" id="UHo-4g-1gX"/>
+                        <outlet property="resumeButton" destination="uPs-nt-bon" id="DEc-3h-LUw"/>
                         <outlet property="stopButton" destination="vDI-qe-N9g" id="zdC-8A-mTr"/>
                         <outlet property="tapToRecord" destination="JI6-ty-sgR" id="Vco-6H-l6g"/>
                         <segue destination="Azi-ee-PwD" kind="show" identifier="stopRecording" id="A7N-cN-Ss1"/>

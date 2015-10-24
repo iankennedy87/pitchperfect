@@ -20,13 +20,19 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
-
+    
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var resumeButton: UIButton!
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         recording.hidden = true
         tapToRecord.hidden = false
+        
+        pauseButton.hidden = true
+        resumeButton.hidden = true
 
     }
 
@@ -37,17 +43,25 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        recordButton.enabled = true
         tapToRecord.hidden = false
+        
+        recordButton.enabled = true
         stopButton.hidden = true
+        pauseButton.hidden = true
+        resumeButton.hidden = true
 
     }
 
     @IBAction func recordAudio(sender: UIButton) {
 
         recordButton.enabled = false
+        
         tapToRecord.hidden = true
-
+        recording.hidden = false
+        
+        pauseButton.hidden = false
+        stopButton.hidden = false
+        
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         let recordingName = "my_audio.wav"
         let pathArray = [dirPath, recordingName]
@@ -60,10 +74,22 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true
         
-        recording.hidden = false
-        stopButton.hidden = false
-        
         audioRecorder.prepareToRecord()
+        audioRecorder.record()
+    }
+    
+    @IBAction func pauseRecorder(sender: UIButton) {
+        audioRecorder.pause()
+        pauseButton.hidden = true
+        resumeButton.hidden = false
+        recording.hidden = true
+        print(recordButton.enabled)
+    }
+    
+    @IBAction func resumeRecorder(sender: UIButton) {
+        print("pressed resume button")
+        resumeButton.hidden = true
+        recording.hidden = false
         audioRecorder.record()
     }
     

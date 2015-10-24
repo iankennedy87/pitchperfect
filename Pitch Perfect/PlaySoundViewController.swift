@@ -13,6 +13,7 @@ class PlaySoundViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer!
     var receivedAudio:RecordedAudio!
+    var audioPlayerNode: AVAudioPlayerNode!
     var audioEngine: AVAudioEngine!
     var audioFile:AVAudioFile!
     
@@ -71,7 +72,7 @@ class PlaySoundViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
         
-        let audioPlayerNode = AVAudioPlayerNode()
+        audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
         let changePitchEffect = AVAudioUnitTimePitch()
@@ -92,7 +93,7 @@ class PlaySoundViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
         
-        let audioPlayerNode = AVAudioPlayerNode()
+        audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
         let echoNode = AVAudioUnitDelay()
@@ -117,7 +118,7 @@ class PlaySoundViewController: UIViewController {
         reverbNode.wetDryMix = wetDryMix
         audioEngine.attachNode(reverbNode)
         
-        let audioPlayerNode = AVAudioPlayerNode()
+        audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
         audioEngine.connect(audioPlayerNode, to: reverbNode, format: nil)
@@ -131,6 +132,7 @@ class PlaySoundViewController: UIViewController {
     
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
+        audioPlayerNode.stop()
     }
 
 }
