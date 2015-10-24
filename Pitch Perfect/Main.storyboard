@@ -194,9 +194,6 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="0.061549136513157895" green="0.18688322368421054" blue="0.30538137335526316" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="168" y="458" width="64" height="18"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbJ-6g-dBQ" userLabel="pauseButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -216,9 +213,6 @@
                                 <state key="normal" title="Tap to resume recording">
                                     <color key="titleColor" red="0.062745098040000002" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="116" y="651" width="168" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="resumeRecorder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAC-D1-pJ4"/>
                                 </connections>
@@ -250,18 +244,18 @@
                                 <exclude reference="uPs-nt-bon"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Rfc-IE-NjW"/>
+                                <exclude reference="uv7-J9-3Nr"/>
                                 <exclude reference="d1c-5f-fPO"/>
                                 <exclude reference="sK8-wZ-76D"/>
-                                <exclude reference="JMF-DR-VgC"/>
-                                <exclude reference="cSw-zZ-FkW"/>
-                                <exclude reference="IId-Zt-hXi"/>
-                                <exclude reference="cu2-le-bQo"/>
-                                <exclude reference="uv7-J9-3Nr"/>
                                 <exclude reference="Ki2-Rm-O56"/>
                                 <exclude reference="CEz-QY-Ey1"/>
                                 <exclude reference="ZZE-Et-WyX"/>
                                 <exclude reference="b2j-Tm-9UA"/>
-                                <exclude reference="Rfc-IE-NjW"/>
+                                <exclude reference="JMF-DR-VgC"/>
+                                <exclude reference="cSw-zZ-FkW"/>
+                                <exclude reference="IId-Zt-hXi"/>
+                                <exclude reference="cu2-le-bQo"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -274,18 +268,18 @@
                                 <include reference="uPs-nt-bon"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Rfc-IE-NjW"/>
+                                <include reference="uv7-J9-3Nr"/>
                                 <include reference="d1c-5f-fPO"/>
                                 <include reference="sK8-wZ-76D"/>
-                                <include reference="JMF-DR-VgC"/>
-                                <include reference="cSw-zZ-FkW"/>
-                                <include reference="IId-Zt-hXi"/>
-                                <include reference="cu2-le-bQo"/>
-                                <include reference="uv7-J9-3Nr"/>
                                 <include reference="Ki2-Rm-O56"/>
                                 <include reference="CEz-QY-Ey1"/>
                                 <include reference="ZZE-Et-WyX"/>
                                 <include reference="b2j-Tm-9UA"/>
-                                <include reference="Rfc-IE-NjW"/>
+                                <include reference="JMF-DR-VgC"/>
+                                <include reference="cSw-zZ-FkW"/>
+                                <include reference="IId-Zt-hXi"/>
+                                <include reference="cu2-le-bQo"/>
                             </mask>
                         </variation>
                     </view>
