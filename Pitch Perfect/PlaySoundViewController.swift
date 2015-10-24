@@ -59,20 +59,21 @@ class PlaySoundViewController: UIViewController {
     @IBAction func playReverbAudio(sender: UIButton) {
         playAudioWithReverb(60)
     }
-    
-    func playSoundAtRate(rate: Float){
+    func resetAudio() {
         audioEngine.stop()
         audioEngine.reset()
         audioPlayer.stop()
+    }
+    func playSoundAtRate(rate: Float){
+        resetAudio()
+        
         audioPlayer.rate = rate
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
     }
     
     func playAudioWithVariablePitch(pitch: Float) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        resetAudio()
         
         audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -91,9 +92,7 @@ class PlaySoundViewController: UIViewController {
     }
     
     func playAudioWithEcho(timeDelay: Float) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        resetAudio()
         
         audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -112,9 +111,7 @@ class PlaySoundViewController: UIViewController {
     }
     
     func playAudioWithReverb(wetDryMix: Float) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        resetAudio()
         
         let reverbNode = AVAudioUnitReverb()
         reverbNode.wetDryMix = wetDryMix
