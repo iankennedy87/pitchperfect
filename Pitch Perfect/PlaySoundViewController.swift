@@ -34,14 +34,7 @@ class PlaySoundViewController: UIViewController {
         
     }
     
-    func playSoundAtRate(rate: Float){
-        audioEngine.stop()
-        audioEngine.reset()
-        audioPlayer.stop()
-        audioPlayer.rate = rate
-        audioPlayer.currentTime = 0.0
-        audioPlayer.play()
-    }
+
     
     @IBAction func playFastSound(sender: UIButton) {
         playSoundAtRate(2)
@@ -65,6 +58,15 @@ class PlaySoundViewController: UIViewController {
     
     @IBAction func playReverbAudio(sender: UIButton) {
         playAudioWithReverb(60)
+    }
+    
+    func playSoundAtRate(rate: Float){
+        audioEngine.stop()
+        audioEngine.reset()
+        audioPlayer.stop()
+        audioPlayer.rate = rate
+        audioPlayer.currentTime = 0.0
+        audioPlayer.play()
     }
     
     func playAudioWithVariablePitch(pitch: Float) {
